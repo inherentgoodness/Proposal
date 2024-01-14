@@ -26,7 +26,7 @@
 
 
 .overlayQ2 {
-  position: absolute; 
+  /* position: absolute;  */
   top: 0;
   right: 0;
   bottom: 0;
@@ -34,9 +34,9 @@
   /* background-color: rgba(52, 152, 219, 0.6); */
    /* Semi-transparent blue overlay */
   /* position: relative; */
-  background-image: url('images/bg_final.JPG'); 
+  background-image: url('images/bg_final_2.JPG'); 
   background-size: cover; /* Adjust the background size as needed */
-  background-position: center; /* Adjust the background position as needed */
+  background-position: bottom; /* Adjust the background position as needed */
 }
 
 
