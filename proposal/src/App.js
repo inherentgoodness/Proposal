@@ -1,32 +1,37 @@
-import logo from './images/logo.png';
-import './App.css';
+// App.js
+import React, { useState } from 'react';
+import SplashScreen from './Splashscreen';
+import Question1 from './Question1';
+import Question2 from './Question2';
+import Proposal from './Proposal';
+import Navbar from './NavBar';
 
+const App = () => {
+  const [currentPage, setCurrentPage] = useState(1);
 
-function App() {
-  const paragraphStyle = {
-    fontSize: '16px',
-    color: 'white',
-    // Add other styles as needed
+  const handleNextClick = () => {
+    setCurrentPage(currentPage + 1);
   };
 
-  const boldTextStyle = {
-    fontWeight: 'bold',
+  const handlePrevClick = () => {
+    setCurrentPage(currentPage - 1);
   };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        {/* <p> */}
-          <span style={boldTextStyle}>Miss. Nitisha Ahuja,</span> <br/>
-          We appreciate the privilege of serving you.<br/>
-          Kindly request you to truthfully fill the feedback questionnaire.<br/>
-        {/* </p> */}
-        <p style={paragraphStyle}>
-          Use the buttons on the top of the screen to navigate
-        </p>
-      </header>
+    <div>
+      <Navbar
+        currentPage={currentPage}
+        onNextClick={handleNextClick}
+        onPrevClick={handlePrevClick}
+      />
+      <div>
+        {currentPage === 1 && <SplashScreen />}
+        {currentPage === 2 && <Question1 />}
+        {currentPage === 3 && <Question2 />}
+        {currentPage === 4 && <Proposal />}
+      </div>
     </div>
   );
-}
+};
 
 export default App;
