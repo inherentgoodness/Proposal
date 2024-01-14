@@ -28,7 +28,7 @@ const App = () => {
         {currentPage === 1 && <SplashScreen />}
         {currentPage === 2 && <Question1 />}
         {currentPage === 3 && <Question2 />}
-        {currentPage === 4 && <Proposal />}
+        {/* {currentPage === 4 && <Proposal />} */}
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ const Navbar = ({ currentPage, onNextClick, onPrevClick }) => {
   return (
     <div className="navbar">
       <button onClick={onPrevClick} disabled={currentPage === 1}>Previous</button>
-      <button onClick={onNextClick} disabled={currentPage === 4}>Next</button>
+      <button onClick={onNextClick} disabled={currentPage === 3}>Next</button>
     </div>
   );
 };
